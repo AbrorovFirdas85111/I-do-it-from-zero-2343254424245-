@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Store</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ5Y4c6O3H6eJKtGi30nUgD5UBpa/9l5xkFzG3hpDzfT9QdFdh5lXgFj2Jx1" crossorigin="anonymous">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navigatsiya menyusi -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-md">
+      <div class="container">
+        <a href="index.html" class="navbar-brand text-2xl font-bold text-blue-600">ClothingStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link text-blue-500 hover:text-blue-700">Home</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link text-blue-500 hover:text-blue-700">Products</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link text-blue-500 hover:text-blue-700">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link text-blue-500 hover:text-blue-700">Contact</a></li>
+            <li class="nav-item"><a href="cart.html" class="nav-link text-blue-500 hover:text-blue-700">Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner bg-blue-500 text-white text-center py-20">
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-4">Welcome to Clothing Store</h1>
+      <p class="text-lg mb-6">Discover the latest trends in fashion with us!</p>
+      <a href="products.html" class="btn btn-light text-blue-500 hover:text-blue-700 px-4 py-2 rounded-md shadow-md">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Mahsulotlar ro'yxati -->
+  <section class="products-preview py-10">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+      <div class="row">
+        <!-- Mahsulot kartasi -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-none shadow-lg">
+            <img src="images/product1.jpg" class="card-img-top rounded-t-lg" alt="Product 1">
+            <div class="card-body">
+              <h5 class="card-title font-bold text-xl">Product Name</h5>
+              <p class="card-text text-gray-700">$25.99</p>
+              <a href="product-details.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card border-none shadow-lg">
+            <img src="images/product2.jpg" class="card-img-top rounded-t-lg" alt="Product 2">
+            <div class="card-body">
+              <h5 class="card-title font-bold text-xl">Product Name</h5>
+              <p class="card-text text-gray-700">$39.99</p>
+              <a href="product-details.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="col-md-4 mb-4">
+    <div class="card border-none shadow-lg">
+      <img src="images/product3.jpg" class="card-img-top rounded-t-lg" alt="Product 3">
+      <div class="card-body">
+        <h5 class="card-title font-bold text-xl">Product Name</h5>
+        <p class="card-text text-gray-700">$19.99</p>
+        <a href="product-details.html" class="btn btn-primary">View Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+      <!-- Ko'proq mahsulotlar uchun tugma -->
+      <div class="text-center mt-8">
+        <a href="products.html" class="btn btn-secondary text-white px-4 py-2 rounded-md shadow-md">
+          View All Products
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us bo'limi -->
+  <section class="about-us bg-gray-200 py-16">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+          <img src="images/about-us.jpg" alt="About Us" class="rounded-lg shadow-md w-full">
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-3xl font-bold text-blue-600 mb-4">About Our Store</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            We are committed to bringing you the best clothing items at affordable prices. With a passion for fashion and quality, we ensure that our customers always stay stylish.
+          </p>
+          <a href="about.html" class="btn btn-primary px-4 py-2 rounded-md shadow-md">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aktsiyalar va chegirmalar bo'limi -->
+  <section class="discounts bg-blue-500 text-white py-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-center mb-8">Special Discounts</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card bg-white text-blue-500 shadow-lg">
+            <div class="card-body text-center">
+              <h5 class="card-title text-xl font-bold">50% Off</h5>
+              <p class="card-text">On all winter wear</p>
+              <a href="products.html" class="btn btn-outline-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-white text-blue-500 shadow-lg">
+            <div class="card-body text-center">
+              <h5 class="card-title text-xl font-bold">Buy 1 Get 1</h5>
+              <p class="card-text">On selected items</p>
+              <a href="products.html" class="btn btn-outline-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-white text-blue-500 shadow-lg">
+            <div class="card-body text-center">
+              <h5 class="card-title text-xl font-bold">Free Shipping</h5>
+              <p class="card-text">On orders over $50</p>
+              <a href="products.html" class="btn btn-outline-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Foydalanuvchi sharhlari bo'limi -->
+    <section class="testimonials bg-gray-100 py-16">
+        <div class="container">
+          <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-lg border-none p-4">
+                <p class="text-gray-700 italic">
+                  "This store has the best clothing items I've ever purchased. The quality is amazing, and the service is exceptional!"
+                </p>
+                <div class="text-right mt-4">
+                  <h5 class="font-bold text-lg">- Sarah J.</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-lg border-none p-4">
+                <p class="text-gray-700 italic">
+                  "Fast delivery and great discounts. Highly recommend this store for everyone who loves trendy fashion."
+                </p>
+                <div class="text-right mt-4">
+                  <h5 class="font-bold text-lg">- Mike W.</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-lg border-none p-4">
+                <p class="text-gray-700 italic">
+                  "Amazing experience shopping here! The website is user-friendly, and the products exceeded my expectations."
+                </p>
+                <div class="text-right mt-4">
+                  <h5 class="font-bold text-lg">- Emily R.</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Blog bo'limi -->
+      <section class="blog py-16">
+        <div class="container">
+          <h2 class="text-3xl font-bold text-center mb-8">From Our Blog</h2>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-lg border-none">
+                <img src="images/blog1.jpg" class="card-img-top rounded-t-lg" alt="Blog Post 1">
+                <div class="card-body">
+                  <h5 class="card-title font-bold text-xl">Fashion Tips for Winter</h5>
+                  <p class="card-text text-gray-700">
+                    Stay warm and stylish with these top fashion tips for the winter season.
+                  </p>
+                  <a href="blog-details.html" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-lg border-none">
+                <img src="images/blog2.jpg" class="card-img-top rounded-t-lg" alt="Blog Post 2">
+                <div class="card-body">
+                  <h5 class="card-title font-bold text-xl">Top 10 Summer Trends</h5>
+                  <p class="card-text text-gray-700">
+                    Explore the hottest summer trends to upgrade your wardrobe.
+                  </p>
+                  <a href="blog-details.html" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-lg border-none">
+                <img src="images/blog3.jpg" class="card-img-top rounded-t-lg" alt="Blog Post 3">
+                <div class="card-body">
+                  <h5 class="card-title font-bold text-xl">Sustainable Fashion Tips</h5>
+                  <p class="card-text text-gray-700">
+                    Learn how to make eco-friendly choices while staying trendy.
+                  </p>
+                  <a href="blog-details.html" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!-- Savollarga javoblar (FAQ) bo'limi -->
+  <section class="faq bg-white py-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item mb-4">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              What is your return policy?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We offer a 30-day return policy. Products must be returned in their original condition.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mb-4">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Do you offer international shipping?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, we ship worldwide. Shipping charges may vary depending on your location.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mb-4">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              How can I track my order?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              You can track your order using the tracking link sent to your email upon shipment.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Obuna bo'limi -->
+  <section class="subscribe bg-gray-100 py-12">
+    <div class="container text-center">
+      <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+      <p class="text-gray-600 mb-6">Subscribe to our newsletter to receive the latest news and exclusive offers.</p>
+      <form class="flex justify-center items-center">
+        <input type="email" placeholder="Enter your email" class="form-control w-1/2 p-3 border border-gray-300 rounded-l-lg">
+        <button type="submit" class="btn btn-primary rounded-r-lg px-6">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8">
+    <div class="container">
+      <div class="row mb-6">
+        <div class="col-md-4">
+          <h5 class="font-bold mb-4">About Us</h5>
+          <p class="text-gray-400">
+            We are a leading online fashion store, committed to delivering the best shopping experience.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="font-bold mb-4">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+            <li><a href="products.html" class="text-gray-400 hover:text-white">Products</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="font-bold mb-4">Follow Us</h5>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-gray-600">
+        &copy; 2024 ClothingStore. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+        <script src="cart.js"></script>
+        <script src="main.js"></script>
+        <script src="filter.js"></script>
+        <script src="slider.js"></script>
+</body>
+</html>
+

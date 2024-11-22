@@ -1,0 +1,1238 @@
+/* 0-100: Reset va Asosiy Uslublar */
+
+/* Brauzer reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  /* Global ranglar */
+  :root {
+    --primary-color: #4caf50;
+    --secondary-color: #1d3557;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --white: #ffffff;
+    --black: #000000;
+    --border-radius: 8px;
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Umumiy sarlavhalar */
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Umumiy tugmalar */
+  button {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Link uslublari */
+  a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Umumiy kartalar */
+  .card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 100-200: Navbar Dizayni */
+  
+  /* Navigatsiya bo'limi */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar ul li {
+    font-size: 1rem;
+  }
+  
+  .navbar ul li a {
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  
+  /* Mobil menyu (default yashirin) */
+  .navbar .burger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Mobil menyu uchun asos */
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column;
+      background: var(--white);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      border-top: 1px solid #ddd;
+      box-shadow: var(--box-shadow);
+    }
+  
+    .navbar ul.active {
+      display: flex;
+    }
+  
+    .navbar .burger {
+      display: block;
+    }
+  }
+  /* 200-300: Banner va Intro Bo'limi */
+
+/* Banner umumiy uslubi */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    height: 80vh;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .banner button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Bannerda animatsiyalar */
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .banner h1, .banner p, .banner button {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* 300-400: Asosiy Sektsiyalar */
+  
+  /* Umumiy Sektsiyalar */
+  .section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .section p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Card grid */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card-grid .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-grid .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Asosiy CTA (Call to Action) */
+  .cta {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--white);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+  }
+  
+  .cta button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--white);
+  }
+  /* 400-500: Mahsulotlar Bo'limi (Products Section) */
+
+/* Umumiy mahsulotlar grid uslubi */
+.products {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+  }
+  
+  .products h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .products .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .products .product-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .products .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .products .product-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid var(--primary-color);
+  }
+  
+  .products .product-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    padding: 1rem;
+  }
+  
+  .products .product-card p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    padding: 0 1rem 1rem;
+  }
+  
+  .products .product-card button {
+    display: block;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .products .product-card button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* 500-600: Kontakt Bo'limi (Contact Section) */
+  
+  /* Umumiy kontakt uslubi */
+  .contact {
+    padding: 4rem 2rem;
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+  }
+  
+  .contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--light-gray);
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .contact form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--white);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-size: 1rem;
+  }
+  
+  .contact form input:focus,
+  .contact form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+  }
+  
+  .contact form button {
+    padding: 0.8rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact form button:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+  }
+  /* 600-700: Savatcha (Cart Section) */
+
+/* Umumiy savatcha bo'limi */
+.cart {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+  }
+  
+  .cart h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .cart .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .cart .cart-table th,
+  .cart .cart-table td {
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .cart .cart-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  
+  .cart .cart-table td img {
+    width: 80px;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+  
+  .cart .cart-summary {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    background-color: var(--light-bg);
+  }
+  
+  .cart .cart-summary h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+  
+  .cart .cart-summary p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .cart .cart-summary .total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+  }
+  
+  .cart .cart-summary button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart .cart-summary button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* 700-800: To'lov (Checkout Section) */
+  
+  /* Checkout bo'limi */
+  .checkout {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+  }
+  
+  .checkout h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .checkout .checkout-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .checkout .checkout-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .checkout .checkout-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .checkout .checkout-form input,
+  .checkout .checkout-form select {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+  }
+  
+  .checkout .checkout-form input:focus,
+  .checkout .checkout-form select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .checkout .checkout-form button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout .checkout-form button:hover {
+    background-color: var(--secondary-color);
+  }
+  /* 800-900: Aloqa (Contact Section) */
+
+/* Umumiy aloqa bo'limi */
+.contact {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .contact .contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .contact .contact-info .info-card {
+    flex: 1 1 calc(33.333% - 2rem);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact .contact-info .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact .contact-info .info-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .contact .contact-info .info-card h4 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact .contact-info .info-card p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+  }
+  
+  .contact .contact-form {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact .contact-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact .contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .contact .contact-form input,
+  .contact .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+  }
+  
+  .contact .contact-form input:focus,
+  .contact .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .contact .contact-form textarea {
+    resize: none;
+    height: 150px;
+  }
+  
+  .contact .contact-form button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact .contact-form button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* 900-1000: Mahsulot detallar (Product Details) */
+  
+  /* Umumiy mahsulot detallar bo'limi */
+  .product-details {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+  }
+  
+  .product-details .product-gallery {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .product-details .product-gallery .main-image {
+    flex: 2;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-details .product-gallery .main-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-details .product-gallery .thumbnails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .product-details .product-gallery .thumbnails img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-details .product-gallery .thumbnails img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-details .product-info {
+    margin-top: 2rem;
+  }
+  
+  .product-details .product-info h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .product-details .product-info p {
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 2rem;
+  }
+  
+  .product-details .product-info .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .product-details .product-info button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-details .product-info button:hover {
+    background-color: var(--secondary-color);
+  }
+  /* 1000-1100: Savat (Cart Section) */
+
+/* Umumiy savat sahifasi */
+.cart {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+  }
+  
+  .cart h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cart .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cart .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cart .cart-item:hover {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart .cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+  }
+  
+  .cart .cart-item .item-details {
+    flex: 1;
+    margin-left: 1rem;
+  }
+  
+  .cart .cart-item .item-details h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .cart .cart-item .item-details p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+  }
+  
+  .cart .cart-item .quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .cart .cart-item .quantity input {
+    width: 50px;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+  }
+  
+  .cart .cart-item .quantity button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart .cart-item .quantity button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .cart .cart-summary {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart .cart-summary h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .cart .cart-summary .summary-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .cart .cart-summary .summary-details p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+  }
+  
+  .cart .cart-summary .summary-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .cart .cart-summary button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart .cart-summary button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* 1100-1200: To‘lov (Checkout Section) */
+  
+  /* Umumiy to‘lov sahifasi */
+  .checkout {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+  }
+  
+  .checkout h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .checkout .checkout-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checkout .checkout-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .checkout .checkout-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .checkout .checkout-form input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+  }
+  
+  .checkout .checkout-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .checkout .checkout-form .payment-methods {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .checkout .checkout-form .payment-method {
+    flex: 1;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--light-gray);
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .checkout .checkout-form .payment-method:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checkout .checkout-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout .checkout-form button:hover {
+    background-color: var(--secondary-color);
+  }
+  /* 1200-1300: Footer (Pastki qism) */
+
+/* Umumiy footer dizayni */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 4rem 2rem;
+  }
+  
+  footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer .footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  footer .footer-logo:hover {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  footer ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  footer ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  footer .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  footer .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  footer .social-icons a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1);
+  }
+  
+  footer .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+  }
+  
+  /* 1300-1400: 404 Sahifasi (Not Found Page) */
+  
+  /* Umumiy 404 sahifasi */
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--light-bg);
+    text-align: center;
+  }
+  
+  .not-found h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .not-found p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+  }
+  
+  .not-found .back-home {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .not-found .back-home:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .not-found img {
+    width: 60%;
+    max-width: 500px;
+    margin-top: 2rem;
+    opacity: 0.8;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  /* Animatsiya: rasmning yengil tebranishi */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  /* 1400-1450: Umumiy Animatsiyalar */
+
+/* Tugmalar uchun hover effekti */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Fade-in animatsiyasi */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Elementlarni kirish animatsiyasi */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Hoverda suratning tebranishi */
+  .img-hover:hover {
+    transform: rotate(3deg) scale(1.02);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Slide-in (chapdan o‘ngga) animatsiya */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in {
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  /* 1450-1500: Responsive Global (umumiy media queries) */
+  
+  /* Kichik ekranlar uchun */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .grid-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    footer .footer-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .not-found img {
+      width: 80%;
+    }
+  }
+  
+  /* Juda kichik ekranlar uchun */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+  
+    .social-icons a {
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,767 @@
+/* 0-50: Umumiy responsive dizayn */
+
+/* Umumiy layoutni moslashtirish */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Flexbox taqsimoti */
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  /* 50-100: Kichik ekranlar uchun umumiy o‘zgarishlar */
+  
+  /* 768px dan kichik ekranlar uchun */
+  @media (max-width: 768px) {
+    header {
+      padding: 1rem;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    nav ul li {
+      margin-bottom: 10px;
+    }
+  
+    .hero {
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+    }
+  }
+  
+  /* 100-150: Kichik ekranlar uchun maxsus sozlamalar */
+  
+  /* 600px dan kichik ekranlar uchun */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+      padding: 0 10px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .btn {
+      padding: 0.8rem 1.6rem;
+      font-size: 1.1rem;
+    }
+  
+    .card {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* 150-200: Mobil telefonlar uchun sozlamalar */
+  
+  /* 480px dan kichik ekranlar uchun */
+  @media (max-width: 480px) {
+    header {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  
+    nav ul {
+      display: block;
+      margin-top: 1rem;
+    }
+  
+    nav ul li {
+      margin-bottom: 0.5rem;
+    }
+  
+    h1 {
+      font-size: 1.6rem;
+      padding: 0 10px;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+    }
+  
+    .hero {
+      padding: 1.5rem;
+    }
+  
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .footer-container {
+      text-align: center;
+    }
+  
+    .social-icons a {
+      font-size: 1rem;
+      margin: 5px;
+    }
+  }
+  /* 200-250: Mobil qurilmalar va kichik ekranlar uchun o'zgartirishlar */
+
+/* 400px dan kichik ekranlar uchun */
+@media (max-width: 400px) {
+    header {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  
+    nav ul {
+      display: block;
+      margin-top: 1rem;
+    }
+  
+    nav ul li {
+      margin-bottom: 0.5rem;
+    }
+  
+    h1 {
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+  
+    h2 {
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+  
+    .hero {
+      padding: 1.2rem;
+      text-align: center;
+    }
+  
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+  
+    .card {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1rem;
+      margin: 5px;
+    }
+  }
+  
+  /* 250-300: Mobile-First uchun responsiv dizayn */
+  
+  /* 375px dan kichik ekranlar uchun */
+  @media (max-width: 375px) {
+    header {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 1.3rem;
+      padding: 0 10px;
+    }
+  
+    .hero {
+      padding: 1.2rem;
+      text-align: center;
+    }
+  
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .btn {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+    }
+  
+    .card {
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+  
+    .footer-container {
+      text-align: center;
+      flex-direction: column;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1rem;
+      margin: 5px;
+    }
+  }
+  
+  /* 300-350: iPhone 5 uchun optimizatsiya */
+  
+  /* 320px dan kichik ekranlar uchun */
+  @media (max-width: 320px) {
+    h1 {
+      font-size: 1.2rem;
+      padding: 0 5px;
+    }
+  
+    .hero {
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+      padding: 0.7rem 1.3rem;
+    }
+  
+    .card {
+      margin-bottom: 0.8rem;
+      padding: 0.9rem;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1rem;
+      margin: 3px;
+    }
+  }
+  
+  /* 350-400: Android telefonlar uchun optimizatsiya */
+  
+  /* 360px dan kichik ekranlar uchun */
+  @media (max-width: 360px) {
+    header {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 1.3rem;
+    }
+  
+    .hero {
+      padding: 1.2rem;
+      text-align: center;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+  
+    .card {
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1rem;
+      margin: 5px;
+    }
+  }
+  
+  /* 350-400: Kichik ekranlar uchun hover efektlari o‘zgartirishlari */
+  
+  /* Hover effektini faollashtirish */
+  @media (max-width: 400px) {
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  
+    .btn:hover {
+      background-color: #ff5722;
+      transition: background-color 0.3s ease;
+    }
+  }
+  /* 400-450: iPad mini va kichik ekranlar uchun optimizatsiya */
+
+/* 768px dan kichik ekranlar uchun */
+@media (max-width: 768px) {
+    header {
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .nav ul {
+      display: block;
+      margin-top: 1rem;
+    }
+  
+    .nav ul li {
+      margin-bottom: 0.8rem;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    .hero {
+      text-align: center;
+      padding: 1.5rem;
+    }
+  
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  
+    .card {
+      padding: 1.2rem;
+    }
+  
+    .footer-container {
+      text-align: center;
+      flex-direction: column;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1.1rem;
+      margin: 5px;
+    }
+  }
+  
+  /* 450-500: Kattaroq mobil telefonlar va planshetlar uchun optimizatsiya */
+  
+  /* 800px dan kichik ekranlar uchun */
+  @media (max-width: 800px) {
+    header {
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  
+    .card {
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1.2rem;
+      margin: 5px;
+    }
+  
+    .btn {
+      padding: 0.8rem 1.6rem;
+      font-size: 1.1rem;
+    }
+  
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* 500-550: 1024px ekranlar uchun optimizatsiya */
+  
+  /* 1024px dan kichik ekranlar uchun */
+  @media (max-width: 1024px) {
+    header {
+      padding: 1.5rem;
+    }
+  
+    .nav ul {
+      display: flex;
+      justify-content: center;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero {
+      padding: 2.5rem;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+  
+    .card {
+      padding: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1.3rem;
+      margin: 10px;
+    }
+  
+    .btn {
+      padding: 1rem 1.8rem;
+      font-size: 1.2rem;
+    }
+  
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* 550-600: Kichik planshetlar va 1366px gacha ekranlar uchun */
+  
+  /* 1366px dan kichik ekranlar uchun */
+  @media (max-width: 1366px) {
+    header {
+      padding: 1.5rem;
+    }
+  
+    .nav ul {
+      display: flex;
+      justify-content: center;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero {
+      padding: 3rem;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+  
+    .card {
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1.4rem;
+      margin: 10px;
+    }
+  
+    .btn {
+      padding: 1.2rem 2rem;
+      font-size: 1.3rem;
+    }
+  
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* 600-650: 1440px ekranlar uchun optimizatsiya */
+  
+  /* 1440px dan kichik ekranlar uchun */
+  @media (max-width: 1440px) {
+    header {
+      padding: 2rem;
+    }
+  
+    h1 {
+      font-size: 2.8rem;
+    }
+  
+    .hero {
+      padding: 3rem;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+  
+    .card {
+      padding: 2.2rem;
+      margin-bottom: 1.8rem;
+    }
+  
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .footer-container .social-icons a {
+      font-size: 1.5rem;
+      margin: 12px;
+    }
+  
+    .btn {
+      padding: 1.3rem 2.2rem;
+      font-size: 1.4rem;
+    }
+  
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  /* Media Query for Large Screens (Desktop) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+        padding: 0 30px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .product-card {
+        display: inline-block;
+        width: 22%;
+        margin: 1%;
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 50px;
+    }
+}
+
+/* Media Query for Tablet (Portrait) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+    }
+
+    .product-card {
+        width: 48%;
+        margin: 1%;
+    }
+
+    .footer {
+        padding: 20px 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Media Query for Mobile (Portrait) */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .product-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+}
+
+/* Mobile Navbar - Hamburger */
+@media (max-width: 767px) {
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* Add animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-in-out;
+}

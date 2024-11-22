@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloqa - Bizning Do'kon</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">Bizning Do'kon</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Bosh sahifa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Haqimizda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Mahsulotlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Aloqa</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Contact Form Section -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">Biz bilan bog'laning</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="#" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ismingiz</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Elektron pochta</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Xabar</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Yuborish</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h4>Bizning manzil</h4>
+                <p>Bizning do'konimiz shahrimizning markazida joylashgan.</p>
+                <p><strong>Manzil:</strong> Tashkent, Olmazor tuman, Main Street, 5</p>
+                <p><strong>Telefon:</strong> +998 90 123 45 67</p>
+                <p><strong>Email:</strong> info@bizningdokon.com</p>
+            </div>
+        </div>
+    </section>
+    <!-- Google Map Embed Section -->
+    <section class="container py-5">
+        <h4 class="text-center mb-4">Bizning Manzilni Xaritada Ko'rsating</h4>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.0362727633767!2d69.24541282495148!3d41.31901757930083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef691d5f9f4ad%3A0x3a1655c71a85e1ab!2z0KHQtdC90YbQsNCz0LjQs9C-0LPQviDRgdC60LDRhtCw0YbQ!5e0!3m2!1sen!2s!4v1682043693282!5m2!1sen!2s"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Bizning Do'kon. Barcha huquqlar himoyalangan.</p>
+            <ul class="list-unstyled">
+                <li><a href="privacy-policy.html" class="text-white">Maxfiylik siyosati</a></li>
+                <li><a href="terms-of-service.html" class="text-white">Foydalanish shartlari</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script src="filter.js"></script>
+    <script src="slider.js"></script>
+</body>
+
+</html>
